@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Sneha J · AI Ads">
+<meta property="og:description" content="Story-led brand films, AI product ads, UGC and VFX videos for brands of every kind.">
+<meta property="og:image" content="media/reel.jpg">
+<title>Sneha J AI Ads</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Freelance AI ad creator for brands of every kind: story-led brand films, AI product ads, UGC and VFX videos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a luxury perfume campaign crossed with an editing app. Sapphire bands (hero, services, contact) carry a sparkling mist; ivory satin bands carry the work.
+   Each section is a "clip" on a gold-and-sapphire timeline fixed at the bottom. Deliberately sapphire-only (one look in every theme). */
+:root{
+  color-scheme: dark;
+  --sapphire-950:#050f2b;
+  --sapphire-900:#08183f;
+  --sapphire-800:#0c2561;
+  --sapphire-600:#1b4aa6;
+  --sapphire-400:#4a7fe0;
+  --ice:#bcd3fb;
+  --ivory:#fcf9f3;
+  --cream:#f4ecdd;
+  --satin:#eadfca;
+  --line:#e3d7c0;
+  --ink:#0d1b3d;
+  --muted:#59647b;
+  --gold:#c9a24b;
+  --gold-hi:#f3dc9a;
+  --gold-lo:#94701f;
+  --gold-text:#86621a;
+  --gold-grad:linear-gradient(100deg,#94701f 0%,#e9cf86 38%,#fff1c7 50%,#d4af5c 64%,#94701f 100%);
+  --on-blue:#f6f1e6;
+  --on-blue-muted:#b7c3dc;
+  --display:"Cormorant Garamond", "Didot", "Bodoni 72", Georgia, serif;
+  --body:"Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --tl-h:62px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+[hidden]{display:none!important}
+img,video{max-width:100%}
+html{scroll-behavior:smooth}
+body{background:var(--sapphire-950);color:var(--on-blue);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:clip;
+  padding-bottom:calc(var(--tl-h) + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;margin:0;line-height:1.02;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.band{position:relative;isolation:isolate}
+.band.blue{background:
+  radial-gradient(120% 90% at 78% 20%, rgba(74,127,224,.55) 0%, rgba(27,74,166,.25) 35%, transparent 65%),
+  radial-gradient(80% 70% at 10% 100%, rgba(27,74,166,.45), transparent 60%),
+  linear-gradient(160deg,var(--sapphire-800) 0%,var(--sapphire-900) 55%,var(--sapphire-950) 100%);
+  color:var(--on-blue)}
+.band.deep{color:var(--on-blue);border-top:1px solid rgba(243,220,154,.14);background:
+  radial-gradient(90% 60% at 85% 0%, rgba(74,127,224,.28), transparent 60%),
+  radial-gradient(70% 60% at 0% 100%, rgba(27,74,166,.30), transparent 60%),
+  linear-gradient(180deg,var(--sapphire-950) 0%,var(--sapphire-900) 100%)}
+.mist{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+section{scroll-margin-top:0}
+.pad{padding-block:96px}
+
+/* gold */
+.goldtext{background:var(--gold-grad);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold-hi) 50%,var(--gold) 80%,transparent)}
+
+/* clip label */
+.clip{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-blue-muted);margin-bottom:22px}
+.clip b{font-weight:600;color:var(--gold-hi);border:1px solid rgba(243,220,154,.6);padding:3px 9px;border-radius:2px}
+.blue .clip{color:var(--on-blue-muted)}
+.blue .clip b{color:var(--gold-hi);border-color:rgba(243,220,154,.6)}
+.clip::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+/* top bar */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:22px}
+.logo{font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:.02em}
+.logo span{font-style:italic;font-weight:500}
+.status{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-blue-muted)}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 0 rgba(243,220,154,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(243,220,154,0)}100%{box-shadow:0 0 0 0 rgba(243,220,154,0)}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center;padding-block:40px 110px}
+.hero h1{font-size:clamp(48px,7.2vw,104px);font-weight:500}
+.hero h1 em{font-style:italic;font-weight:500}
+.hero .lede{color:var(--on-blue-muted);font-size:18px;max-width:46ch;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chips span{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid rgba(243,220,154,.35);background:rgba(255,255,255,.06);backdrop-filter:blur(6px);color:var(--on-blue)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:.02em;padding:15px 26px;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn.gold{background:var(--gold-grad);background-size:200% 100%;color:#1d1405;box-shadow:0 10px 30px -10px rgba(201,162,75,.7)}
+.btn.gold:hover{background-position:100% 0}
+.btn.gold::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:glint 4.5s ease-in-out infinite}
+@keyframes glint{0%,60%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+.btn.ghost{color:var(--on-blue);border-color:rgba(246,241,230,.4);background:rgba(255,255,255,.04)}
+.btn.ghost:hover{border-color:var(--gold-hi)}
+.btn.navy{background:var(--sapphire-800);color:var(--on-blue)}
+.btn.navy:hover{background:var(--sapphire-600)}
+
+/* crystal monitor */
+.monitor{justify-self:end;width:100%;max-width:350px;padding:12px;border-radius:22px;
+  background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.04));border:1px solid rgba(243,220,154,.45);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.25);backdrop-filter:blur(10px);position:relative}
+.monitor::before{content:"";position:absolute;inset:-1px;border-radius:22px;padding:1px;background:var(--gold-grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.mon-top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--on-blue-muted);padding:2px 6px 10px}
+.screen{position:relative;aspect-ratio:9/16;max-width:100%;background:#000;border-radius:12px;overflow:hidden}
+.screen video{width:100%;height:100%;object-fit:cover;display:block}
+.tc{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:12px;color:var(--gold-hi);display:flex;justify-content:space-between;padding:10px 6px 2px}
+
+/* section heads */
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:40px}
+.head h2{font-size:clamp(40px,5vw,68px)}
+.head h2 em{font-style:italic}
+.head p{color:var(--on-blue-muted);max-width:40ch}
+.blue .head p{color:var(--on-blue-muted)}
+
+/* work */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font-family:var(--body);font-size:13px;font-weight:500;background:rgba(255,255,255,.05);color:var(--on-blue);border:1px solid rgba(243,220,154,.3);padding:8px 16px;border-radius:999px;cursor:pointer}
+.filters button:hover{border-color:var(--gold)}
+.filters button[aria-pressed="true"]{background:var(--gold-grad);color:#1d1405;border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.card{display:flex;flex-direction:column;gap:16px;min-width:0}
+.card .screen{cursor:pointer;border-radius:14px;box-shadow:0 30px 50px -24px rgba(0,0,0,.65);outline:1px solid rgba(243,220,154,.45);outline-offset:4px}
+.card.wide{grid-column:1/-1}
+.card.wide .screen{aspect-ratio:16/9;width:100%}
+.card.span2{grid-column:span 2}
+.card.sq .screen{aspect-ratio:1/1}
+.card.sq.span2{flex-direction:row;gap:24px;align-items:flex-start}
+.card.sq.span2 .screen{width:56.25%;flex-shrink:0}
+.card.sq.span2 .meta{flex:1;min-width:0;padding-top:6px}
+.sound{position:absolute;right:10px;bottom:10px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;background:rgba(8,24,63,.6);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(243,220,154,.45);padding:6px 10px;border-radius:999px;cursor:pointer}
+.dur{position:absolute;left:10px;top:10px;font-family:var(--mono);font-size:10px;background:rgba(8,24,63,.6);color:#fff;padding:3px 8px;border-radius:999px}
+.meta{display:flex;flex-direction:column;gap:6px}
+.meta .row{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#9fbcf2}
+.tag{color:var(--gold-hi)}
+.meta h3{font-size:27px;font-weight:600;font-style:italic}
+.meta p{color:var(--on-blue-muted);font-size:14.5px}
+.meta p strong{color:var(--on-blue);font-weight:600}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc article{position:relative;padding:34px 30px;border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.02));border:1px solid rgba(243,220,154,.28);backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:12px;min-width:0}
+.svc .gem{width:34px;height:34px}
+.svc h3{font-size:32px}
+.svc p{color:var(--on-blue-muted);font-size:15px}
+.svc dl{margin:auto 0 0;padding-top:16px;border-top:1px solid rgba(243,220,154,.22);display:flex;flex-direction:column;gap:8px}
+.svc dl div{display:grid;grid-template-columns:76px 1fr;gap:10px;align-items:baseline}
+.svc dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi)}
+.svc dd{margin:0;font-size:14px;color:var(--on-blue)}
+.incl{margin-top:28px;padding:28px 30px;border-radius:18px;border:1px solid rgba(243,220,154,.35);background:rgba(5,15,43,.35);display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start}
+.incl h3{font-size:28px;font-style:italic}
+.incl ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px}
+.incl li{position:relative;padding-left:20px;font-size:14.5px;color:var(--on-blue)}
+.incl li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;transform:rotate(45deg);background:var(--gold-grad)}
+
+/* process */
+.track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
+.step{background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02));border:1px solid rgba(243,220,154,.25);backdrop-filter:blur(8px);border-radius:16px;padding:26px 22px;min-width:0;position:relative}
+.step::before{content:"";position:absolute;left:22px;right:22px;top:-1px;height:2px;background:var(--gold-grad)}
+.step .n{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--gold-hi)}
+.step h3{font-size:28px;margin:8px 0 8px}
+.step p{color:var(--on-blue-muted);font-size:14.5px}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.about .quote{font-family:var(--display);font-size:clamp(38px,4.6vw,62px);line-height:1.08;font-style:italic;color:var(--on-blue)}
+.about .quote .goldtext{font-style:italic}
+.about h2{font-size:clamp(34px,3.6vw,46px);margin-bottom:18px}
+.about p{color:var(--on-blue-muted);font-size:17px;max-width:58ch}
+.about p + p{margin-top:14px}
+.stat{display:inline-flex;align-items:baseline;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid rgba(243,220,154,.25)}
+.stat strong{font-family:var(--display);font-size:56px;font-weight:500;line-height:1}
+.stat span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-blue-muted)}
+
+/* contact */
+.contact{text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px;padding-block:110px 90px}
+.contact h2{font-size:clamp(44px,6.4vw,92px)}
+.contact h2 em{font-style:italic}
+.contact .lede{color:var(--on-blue-muted);font-size:18px;max-width:44ch}
+.mail{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;padding:10px 10px 10px 22px;border-radius:999px;border:1px solid rgba(243,220,154,.45);background:rgba(255,255,255,.06);backdrop-filter:blur(8px);max-width:100%}
+.mail .v{font-family:var(--mono);font-size:15px;overflow-wrap:anywhere;user-select:all;text-decoration:none}
+.mail button{font-family:var(--mono);font-size:11px;letter-spacing:.08em;background:transparent;border:1px solid rgba(246,241,230,.35);color:var(--on-blue);padding:8px 14px;border-radius:999px;cursor:pointer}
+footer{padding-block:26px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--on-blue-muted);text-align:center}
+
+/* timeline */
+.timeline{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(5,15,43,.82);backdrop-filter:blur(14px) saturate(1.2);border-top:1px solid rgba(243,220,154,.28);
+  padding:9px max(20px,env(safe-area-inset-right,0px)) calc(9px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px))}
+.tl-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.tl-tc{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:12px;color:var(--gold-hi);flex-shrink:0}
+.tl-track{position:relative;flex:1;display:flex;gap:3px;height:32px;min-width:0}
+.tl-track a{flex:var(--w,1);min-width:0;background:var(--c);opacity:.35;border-radius:6px;text-decoration:none;color:#fff;font-family:var(--mono);font-size:10px;font-weight:600;padding:5px 8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-transform:uppercase;letter-spacing:.08em;transition:opacity .25s}
+.tl-track a.on{opacity:1}
+.playhead{position:absolute;top:-7px;bottom:-7px;width:2px;background:var(--gold);left:0;pointer-events:none;box-shadow:0 0 8px rgba(201,162,75,.8)}
+.playhead::before{content:"";position:absolute;top:-2px;left:-5px;border:6px solid transparent;border-top:8px solid var(--gold)}
+
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:80px}
+  .monitor{justify-self:start;max-width:310px}
+  .svc{grid-template-columns:1fr}
+  .incl{grid-template-columns:1fr}
+  .incl ul{grid-template-columns:1fr 1fr}
+  .track{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about{grid-template-columns:1fr;gap:32px}
+  .pad{padding-block:72px}
+}
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .card .screen{max-width:360px}
+  .card.wide .screen,.card.sq .screen{max-width:100%}
+  .card.span2{grid-column:auto}
+  .card.sq.span2{flex-direction:column}
+  .card.sq.span2 .screen{width:100%}
+  .track{grid-template-columns:1fr}
+  .incl ul{grid-template-columns:1fr}
+  .tl-tc{display:none}
+  .tl-track a{font-size:0;padding:0}
+  .status{display:none}
+}
+
+/* floating contact button, visible on every section */
+.fab{position:fixed;z-index:25;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(var(--tl-h) + 18px + env(safe-area-inset-bottom,0px));
+  display:inline-flex;align-items:center;gap:9px;padding:13px 20px;border-radius:999px;text-decoration:none;font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:.02em;
+  background:var(--gold-grad);background-size:200% 100%;color:#1d1405;border:1px solid rgba(255,241,199,.6);box-shadow:0 14px 34px -10px rgba(0,0,0,.6),0 0 0 4px rgba(201,162,75,.15);transition:transform .2s,background-position .4s}
+.fab:hover{transform:translateY(-2px);background-position:100% 0}
+.fab svg{width:17px;height:17px;flex-shrink:0}
+@media (max-width:560px){.fab{padding:12px 16px;font-size:13px}}
+</style>
+</head>
+<body>
+
+
+<section class="band blue" id="reel" data-clip="Reel">
+  <canvas class="mist" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="bar">
+      <span class="logo">Sneha <span>J</span></span>
+      <span class="status">Booking select projects</span>
+    </div>
+    <div class="hero">
+      <div>
+        <div class="clip"><b>Clip 01</b> Showreel</div>
+        <h1>AI ads that make people <em class="goldtext">stop scrolling</em> and start buying.</h1>
+        <p class="lede">I'm a freelance AI ad creator for brands of every kind, from beauty, fashion and food to tech, lifestyle and services. I make story-led brand films, product ads, creator-style UGC and VFX videos, each one scripted, directed and hand-edited by me, ready for Instagram, Meta ads, YouTube and your website.</p>
+        <div class="chips"><span>Brand films</span><span>Product ads</span><span>UGC videos</span><span>VFX &amp; splash films</span><span>Any industry</span></div>
+        <div class="ctas">
+          <a class="btn gold" href="#work">See my work</a>
+          <a class="btn ghost" href="#contact">Email me</a>
+        </div>
+      </div>
+      <div class="monitor">
+        <div class="mon-top"><span>PROGRAM</span><span>1080 × 1920 · 9:16</span></div>
+        <div class="screen">
+          <video src="media/reel.mp4" poster="media/reel.jpg" muted autoplay loop playsinline preload="auto" aria-label="Showreel of my AI ads"></video>
+        </div>
+        <div class="tc"><span>REEL_2026</span><span id="reelTc">00:00:00:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band deep pad" id="work" data-clip="Work">
+  <canvas class="mist" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="clip"><b>Clip 02</b> Work</div>
+    <div class="head">
+      <h2>Recent <em>ads</em></h2>
+      <div class="filters" role="group" aria-label="Filter by niche">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="jewellery" aria-pressed="false">Jewellery</button>
+        <button type="button" data-f="fashion" aria-pressed="false">Fashion</button>
+        <button type="button" data-f="food" aria-pressed="false">Food</button>
+        <button type="button" data-f="beauty" aria-pressed="false">Beauty</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="band blue pad" id="services" data-clip="Services">
+  <canvas class="mist" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="clip"><b>Clip 03</b> Services</div>
+    <div class="head"><h2>What I <em>make</em></h2><p>Six kinds of films for any brand, in any industry. One approach: find the feeling first, then build the world around your product.</p></div>
+    <div class="svc">
+      <article><svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3dc9a"/><stop offset=".5" stop-color="#c9a24b"/><stop offset="1" stop-color="#94701f"/></linearGradient></defs><path d="M20 3 L35 15 L20 37 L5 15 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/><path d="M5 15 H35 M14 15 L20 3 L26 15 L20 37 Z" fill="none" stroke="url(#g1)" stroke-width="1"/></svg>
+        <h3>Story-led brand films</h3><p>Short films with a real story: a hook, an emotion and your product as the hero. Like the husband who forgets the Diwali gift, or a family sharing mithai.</p>
+        <dl><div><dt>Best for</dt><dd>Launches, festive campaigns, brand awareness</dd></div><div><dt>Works on</dt><dd>Reels, YouTube, Meta ads</dd></div></dl></article>
+      <article><svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L35 15 L20 37 L5 15 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/><path d="M5 15 H35 M14 15 L20 3 L26 15 L20 37 Z" fill="none" stroke="url(#g1)" stroke-width="1"/></svg>
+        <h3>AI product ads</h3><p>Your product placed in a luxury, festive or lifestyle world, lit and styled like a high-end campaign shoot, without the studio.</p>
+        <dl><div><dt>Best for</dt><dd>New products, catalogue refresh, sale campaigns</dd></div><div><dt>Works on</dt><dd>Reels, Meta ads, website banners</dd></div></dl></article>
+      <article><svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L35 15 L20 37 L5 15 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/><path d="M5 15 H35 M14 15 L20 3 L26 15 L20 37 Z" fill="none" stroke="url(#g1)" stroke-width="1"/></svg>
+        <h3>AI UGC videos</h3><p>Creator-style videos with AI people: reviews, reactions, unboxings and POV stories that feel like they were filmed on a phone.</p>
+        <dl><div><dt>Best for</dt><dd>Building trust, performance ads, testing hooks</dd></div><div><dt>Works on</dt><dd>Reels, Stories, Meta ads</dd></div></dl></article>
+      <article><svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L35 15 L20 37 L5 15 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/><path d="M5 15 H35 M14 15 L20 3 L26 15 L20 37 Z" fill="none" stroke="url(#g1)" stroke-width="1"/></svg>
+        <h3>VFX &amp; splash films</h3><p>Slow-motion splashes, swirls, melts and transformations. Strawberry milk, molten chocolate, serum drops, all made to make people watch twice.</p>
+        <dl><div><dt>Best for</dt><dd>Food, drinks, beauty, and any product that pours, melts or sparkles</dd></div><div><dt>Works on</dt><dd>Reels, Shorts, YouTube pre-roll</dd></div></dl></article>
+      <article><svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L35 15 L20 37 L5 15 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/><path d="M5 15 H35 M14 15 L20 3 L26 15 L20 37 Z" fill="none" stroke="url(#g1)" stroke-width="1"/></svg>
+        <h3>Model &amp; lifestyle showcase</h3><p>AI models using, wearing or presenting your product in real-life moments: outfits, jewellery, gadgets, home and personal care.</p>
+        <dl><div><dt>Best for</dt><dd>Fashion, accessories, lifestyle and consumer brands</dd></div><div><dt>Works on</dt><dd>Reels, lookbooks, Meta ads</dd></div></dl></article>
+      <article><svg class="gem" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L35 15 L20 37 L5 15 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/><path d="M5 15 H35 M14 15 L20 3 L26 15 L20 37 Z" fill="none" stroke="url(#g1)" stroke-width="1"/></svg>
+        <h3>Festive &amp; seasonal campaigns</h3><p>A set of matching ads planned around a season: Diwali, wedding season, Valentine's, New Year, or your own sale.</p>
+        <dl><div><dt>Best for</dt><dd>Brands that want a full campaign, not a single ad</dd></div><div><dt>Works on</dt><dd>Every platform, in every size</dd></div></dl></article>
+    </div>
+  </div>
+</section>
+
+<section class="band deep pad" id="about" data-clip="About">
+  <canvas class="mist" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="clip"><b>Clip 04</b> About</div>
+    <div class="about">
+      <p class="quote">“AI is my camera.<br>The <span class="goldtext">story</span> is still mine.”</p>
+      <div>
+        <h2>Hi, I'm Sneha.</h2>
+        <p>I've been editing videos and making content for 6 years. Now I use AI to make ads that used to need a full shoot: models, sets, festive lighting and all.</p>
+        <p>I studied Computer Science and Business Systems and worked in business development at a digital advertising company, so I think about what sells, not only what looks beautiful.</p>
+        <div class="stat"><strong class="goldtext">6 yrs</strong><span>video editing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band blue" id="contact" data-clip="Contact">
+  <canvas class="mist" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="contact">
+      <div class="clip" style="margin:0"><b>Clip 05</b> Contact</div>
+      <h2>Let's make your brand <em class="goldtext">unforgettable.</em></h2>
+      <p class="lede">Tell me about your product, your audience and your next launch or sale. I'll suggest the kind of film that will work best, whether it's a story ad, a product film or a full festive campaign.</p>
+      <div class="mail">
+        <a class="v" href="mailto:sneha.jay@sunentrix.cfd?subject=AI%20ad%20enquiry">sneha.jay@sunentrix.cfd</a>
+        <button type="button" data-copy="sneha.jay@sunentrix.cfd">Copy</button>
+      </div>
+      <a class="btn gold" href="mailto:sneha.jay@sunentrix.cfd?subject=AI%20ad%20enquiry">Email me</a>
+    </div>
+    <div class="rule"></div>
+    <footer>© 2026 Sneha J · Freelance AI ad creator</footer>
+  </div>
+</section>
+
+<a class="fab" href="mailto:sneha.jay@sunentrix.cfd?subject=AI%20ad%20enquiry" aria-label="Contact me by email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>Contact me</a>
+
+<nav class="timeline" aria-label="Page timeline">
+  <div class="tl-inner">
+    <span class="tl-tc" id="tlTc">00:00:00:00</span>
+    <div class="tl-track" id="track"><div class="playhead" id="ph"></div></div>
+  </div>
+</nav>
+
+<script>
+// ---- Your work: add a new ad by adding one entry here ----
+const WORKS = [
+  {niche:"jewellery", label:"Jewellery", title:"Wait. I forgot.", brand:"Gold jewellery brand · Diwali", what:"POV story ad: husband forgets the Diwali gift and races to the store. Hook, UGC acting, product reveal.", tag:"Concept ad", src:"media/jewellery.mp4", poster:"media/jewellery.jpg", dur:"0:20"},
+  {niche:"fashion", label:"Fashion", title:"Nothing to wear", brand:"Ethnic wear brand · Diwali", what:"Relatable closet problem, sister's phone, then a twirl transition into the festive look.", tag:"Concept ad", src:"media/fashion.mp4", poster:"media/fashion.jpg", dur:"0:21"},
+  {niche:"food", label:"Sweets", title:"Kuch meetha ho jaaye", brand:"Mithai brand · Diwali gifting", what:"Family Diwali scene with gift-box close-ups and real-feeling reactions, made for festive gifting.", tag:"Concept ad", src:"media/sweets.mp4", poster:"media/sweets.jpg", dur:"0:30"},
+  {niche:"beauty", label:"Beauty", title:"Strawberry shine", brand:"Lip gloss brand · Product ad", what:"Strawberry-milk splash, glossy bubble close-ups and a beach-side model moment with the product.", tag:"Concept ad", src:"media/lipgloss-new.mp4", poster:"media/lipgloss-new.jpg", dur:"0:20"},
+  {niche:"beauty", label:"Beauty", title:"Liquid gold", brand:"Skincare serum brand · Product film", what:"Luxury product film: macro serum drops, glowing skin texture and a rich hero shot. Made for YouTube, website banners and 16:9 ads.", tag:"Concept ad", src:"media/skincare.mp4", poster:"media/skincare.jpg", dur:"0:10", wide:true, span2:true},
+  {niche:"food", label:"Chocolate", title:"Melt into winter", brand:"Chocolate brand · Product ad", what:"Hot cocoa and marshmallow splash, chocolate ribbons wrapping the bar, cosy fireplace mood and an Order Now end card.", tag:"Concept ad", src:"media/chocolate-new.mp4", poster:"media/chocolate-new.jpg", dur:"0:13", sq:true, span2:true},
+];
+
+const grid = document.getElementById('grid');
+grid.innerHTML = WORKS.map((w,i)=>`
+  <article class="card${w.wide?' wide':''}${w.span2?' span2':''}${w.sq?' sq':''}" data-niche="${w.niche}">
+    <div class="screen" data-i="${i}">
+      <video src="${w.src}" poster="${w.poster}" muted loop playsinline preload="metadata" aria-label="${w.title}"></video>
+      <span class="dur">${w.dur}</span>
+      <button class="sound" type="button">Tap for sound</button>
+    </div>
+    <div class="meta">
+      <div class="row"><span>${w.label}</span><span class="tag">${w.tag}</span></div>
+      <h3>${w.title}</h3>
+      <p><strong>${w.brand}.</strong> ${w.what}</p>
+    </div>
+  </article>`).join('');
+
+// play cards when on screen, one with sound at a time
+const vids=[...grid.querySelectorAll('video')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target; if(e.isIntersecting){v.play().catch(()=>{})} else {v.pause(); if(!v.muted){v.muted=true; label(v)}}}),{threshold:.4});
+vids.forEach(v=>io.observe(v));
+function label(v){v.parentElement.querySelector('.sound').textContent = v.muted ? 'Tap for sound' : 'Sound on'}
+grid.querySelectorAll('.screen').forEach(s=>s.addEventListener('click',()=>{
+  const v=s.querySelector('video'); const turnOn=v.muted;
+  vids.forEach(o=>{o.muted=true;label(o)});
+  if(turnOn){v.muted=false; v.currentTime=0; v.play().catch(()=>{})}
+  label(v);
+}));
+
+// filters
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const f=b.dataset.f;
+  grid.querySelectorAll('.card').forEach(c=>c.hidden = !(f==='all'||c.dataset.niche===f));
+}));
+
+// showreel timecode
+const reel=document.querySelector('.monitor video'), reelTc=document.getElementById('reelTc');
+const tc=s=>{const f=Math.floor((s%1)*25), t=Math.floor(s); return [Math.floor(t/3600),Math.floor(t/60)%60,t%60,f].map(n=>String(n).padStart(2,'0')).join(':')};
+reel.addEventListener('timeupdate',()=>reelTc.textContent=tc(reel.currentTime));
+
+// bottom timeline: sections are clips, playhead follows scroll
+const colors=['#4a7fe0','#c9a24b','#2f62c4','#a8822f','#7aa2ee','#d4af5c'];
+const secs=[...document.querySelectorAll('section[data-clip]')], track=document.getElementById('track'), ph=document.getElementById('ph'), tlTc=document.getElementById('tlTc');
+secs.forEach((s,i)=>{const a=document.createElement('a');a.href='#'+s.id;a.textContent=s.dataset.clip;a.style.setProperty('--c',colors[i%colors.length]);a.title=s.dataset.clip;track.insertBefore(a,ph)});
+const clips=[...track.querySelectorAll('a')];
+function sizeClips(){secs.forEach((s,i)=>clips[i].style.setProperty('--w',Math.max(1,s.offsetHeight)))}
+function onScroll(){
+  const max=document.documentElement.scrollHeight-innerHeight, p=max>0?Math.min(1,scrollY/max):0;
+  ph.style.left=`calc(${p*100}% - 1px)`;
+  tlTc.textContent=tc(p*60);
+  let cur=0; secs.forEach((s,i)=>{if(s.getBoundingClientRect().top < innerHeight*.45) cur=i});
+  clips.forEach((c,i)=>c.classList.toggle('on',i===cur));
+}
+sizeClips(); onScroll();
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',()=>{sizeClips();onScroll()});
+
+// copy buttons
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{
+  const o=b.textContent;
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.copy).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent=o,1500)}).catch(()=>{})}
+}));
+
+// perfume-mist sparkles on the sapphire bands
+(()=>{
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('canvas.mist').forEach(cv=>{
+    const ctx=cv.getContext('2d'); let W=0,H=0,dpr=1,parts=[],run=false,raf=0;
+    const make=()=>{
+      const n=Math.round(W*H/9000);
+      parts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.3,
+        vx:(Math.random()*.25+.05),vy:-(Math.random()*.2+.04),a:Math.random(),tw:Math.random()*.02+.004,
+        gold:Math.random()<.18,star:Math.random()<.035}));
+    };
+    const size=()=>{const r=cv.getBoundingClientRect();dpr=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);make();draw(0)};
+    const draw=(step)=>{
+      ctx.clearRect(0,0,W,H);
+      for(const p of parts){
+        if(step){p.x+=p.vx*step;p.y+=p.vy*step;p.a+=p.tw*step;if(p.x>W+5)p.x=-5;if(p.y<-5)p.y=H+5}
+        const al=.25+.75*Math.abs(Math.sin(p.a));
+        ctx.fillStyle=p.gold?`rgba(243,220,154,${al})`:`rgba(220,232,255,${al*.85})`;
+        if(p.star){const s=p.r*5;ctx.beginPath();ctx.moveTo(p.x,p.y-s);ctx.quadraticCurveTo(p.x,p.y,p.x+s,p.y);ctx.quadraticCurveTo(p.x,p.y,p.x,p.y+s);ctx.quadraticCurveTo(p.x,p.y,p.x-s,p.y);ctx.quadraticCurveTo(p.x,p.y,p.x,p.y-s);ctx.fill()}
+        else{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill()}
+      }
+    };
+    let last=0;const loop=t=>{if(!run)return;const step=last?Math.min(3,(t-last)/16.7):1;last=t;draw(step);raf=requestAnimationFrame(loop)};
+    size(); addEventListener('resize',size);
+    if(!still) new IntersectionObserver(es=>es.forEach(e=>{run=e.isIntersecting;last=0;cancelAnimationFrame(raf);if(run)raf=requestAnimationFrame(loop)})).observe(cv);
+  });
+})();
+</script>
+
+</body>
+</html>
